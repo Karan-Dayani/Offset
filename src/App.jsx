@@ -1,7 +1,21 @@
 import React from "react";
+import {
+    RouterProvider,
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route
+} from "react-router-dom"
 
-const App = () => (
-    <h1>Hallo Everynian</h1>
-)
+import Layout from "./components/Layout";
 
-export default App;
+const router = createBrowserRouter(createRoutesFromElements(
+    <Route path="/" element={<Layout />} >
+        <Route index element={<h1>Home</h1>} />
+    </Route>
+))
+
+export default function App() {
+    return (
+        <RouterProvider router={router} />
+    )
+}
