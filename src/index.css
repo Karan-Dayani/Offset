@@ -6,4 +6,127 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*> Header css */
+.pc-header {
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 0 35px;
+}
+
+.pc-header > .site-logo,
+.mob-header > .site-logo {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pc-header > ul {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pc-header > ul > li {
+    height: inherit;
+}
+
+.pc-header > .header-start-links {
+    justify-content: start;
+}
+
+.pc-header > .header-end-links {
+    justify-content: end;
+}
+
+.pc-header > ul > li > a {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #000000;
+    border-bottom: 1px solid #ffffff;
+    transition: 0.2s ease;
+}
+
+.pc-header > ul > li > a:hover {
+    opacity: 80%;
+    border-bottom: 1px solid #000000;
+}
+
+.mob-header,
+.mob-header-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .pc-header {
+        display: none;
+    }
+
+    .mob-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        padding: 0 20px;
+    }
+
+    .mob-header > div > a {
+        display: flex;
+        height: inherit;
+        align-items: center;
+        text-decoration: none;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+
+    .mob-header > .header-end {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mob-header-menu {
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .active-menu {
+        height: 96px;
+    }
+
+    .mob-header-menu > ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mob-header-menu > ul > li {
+        list-style: none;
+    }
+
+    .mob-header-menu > ul > li > a {
+        text-decoration: none;
+        color: #000000;
+    }
 }

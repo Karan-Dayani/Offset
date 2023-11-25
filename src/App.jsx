@@ -11,6 +11,11 @@ import Layout from "./components/Layout";
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<Layout />} >
         <Route index element={<h1>Home</h1>} />
+        <Route path="/collection" element={<h1>Collection</h1>} />
+        <Route path="/men" element={<h1>men</h1>} />
+        <Route path="/women" element={<h1>women</h1>} />
+        <Route path="/about" element={<h1>about</h1>} />
+        <Route path="/cart" element={<h1>cart</h1>} />
     </Route>
 ))
 
