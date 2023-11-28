@@ -172,6 +172,13 @@ html::-webkit-scrollbar {
     padding: 15px 25px;
 }
 
+.home-hero-left-div > a > span {
+    transition: 0.2s ease;
+}
+.home-hero-left-div > a:hover > span {
+    opacity: 80%;
+}
+
 .home-hero-img {
     width: 500px;
 }
@@ -204,21 +211,25 @@ html::-webkit-scrollbar {
 }
 
 /*> Home Men Div */
-.home-men-div {
+.home-men-div,
+.home-women-div {
     display: flex;
     justify-content: center;
     gap: 30px;
     text-align: center;
     height: fit-content;
+    margin: 30px 0;
 }
 
-.home-men-left-div > p {
+.home-men-left-div > p,
+.home-women-left-div > p {
     font-size: 13px;
     color: #0009;
     margin: 0;
 }
 
-.home-men-left-div > h2 {
+.home-men-left-div > h2,
+.home-women-left-div > h2 {
     font-size: 36px;
     font-weight: 600;
     width: 560px;
@@ -228,14 +239,25 @@ html::-webkit-scrollbar {
     line-height: 1em;
 }
 
-.home-men-left-div > a {
+.home-men-left-div > a,
+.home-women-left-div > a {
     text-decoration: none;
     color: #ffffff;
     background-color: #000000;
     padding: 15px 25px;
 }
 
-.home-men-img-left {
+.home-men-left-div > a > span,
+.home-women-left-div > a > span {
+    transition: 0.2s ease;
+}
+.home-men-left-div > a:hover > span,
+.home-women-left-div > a:hover > span {
+    opacity: 80%;
+}
+
+.home-men-img-left,
+.home-women-img-left {
     width: 560px;
     height: 400px;
     object-fit: cover;
@@ -243,32 +265,109 @@ html::-webkit-scrollbar {
     margin-bottom: 25px;
 }
 
-.home-men-img-right {
+.home-men-img-right,
+.home-women-img-right {
     width: 560px;
     height: 600px;
     object-fit: cover;
 }
 
 @media screen and (max-width: 1024px) {
-    .home-men-div {
+    .home-men-div,
+    .home-women-div {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 40px;
     }
 
-    .home-men-img-left {
+    .home-men-img-left,
+    .home-women-img-left {
         width: 100%;
         height: 240px;
         object-position: 0 80%;
     }
-    .home-men-img-right {
+    .home-men-img-right,
+    .home-women-img-right {
         width: 100%;
         height: 300px;
+        display: none;
     }
 
-    .home-men-left-div > h2 {
+    .home-men-left-div > h2,
+    .home-women-left-div > h2 {
         font-size: 25px;
         width: auto;
+    }
+}
+
+.home-collection-div {
+    background: url("/assets/images/home-collection.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #00000053;
+    background-blend-mode: darken;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    text-align: center;
+    padding: 25% 15%;
+}
+
+.home-collection-div > p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.25em;
+}
+
+.home-collection-div > h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1em;
+}
+
+.home-collection-div > h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+}
+
+.home-collection-div > a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 15px 25px;
+    line-height: 1em;
+}
+
+.home-collection-div > a > span {
+    transition: 0.2s ease;
+}
+.home-collection-div > a:hover > span {
+    opacity: 80%;
+}
+
+@media screen and (max-width: 1024px) {
+    .home-collection-div {
+        padding: 25% 0;
+    }
+
+    .home-collection-div > h3 {
+        font-size: 25px;
+    }
+
+    .home-collection-div > h4 {
+        font-size: 20px;
     }
 }
